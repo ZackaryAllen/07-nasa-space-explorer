@@ -28,7 +28,7 @@ modal.style.alignItems = 'center';
 modal.style.color = 'white';
 modal.style.padding = '20px';
 modal.style.overflowY = 'auto';
-modal.innerHTML = '<div id="modal-content" style="background: #333; padding: 20px; border-radius: 8px; max-width: 90%; max-height: 90%; width: 100%; text-align: center; position: relative; overflow-y: auto;"><button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: #ff4d4d; color: white; border: none; padding: 10px 15px; font-size: 16px; cursor: pointer; border-radius: 4px;">Close</button></div>';
+modal.innerHTML = '<div id="modal-content" style="background: #333; padding: 20px; border-radius: 8px; max-width: 90%; max-height: 90%; width: 100%; text-align: center; position: relative; overflow-y: auto;"><button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: transparent; color: white; border: none; font-size: 20px; cursor: pointer;">&times;</button></div>';
 document.body.appendChild(modal);
 
 const modalContent = document.getElementById('modal-content');
@@ -111,7 +111,7 @@ button.addEventListener('click', () => {
         galleryItem.addEventListener('click', () => {
           modal.style.display = 'flex';
           modalContent.innerHTML = `
-            <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: #ff4d4d; color: white; border: none; padding: 10px 15px; font-size: 16px; cursor: pointer; border-radius: 4px;">Close</button>
+            <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: transparent; color: white; border: 1px solid white; padding: 5px 10px; font-size: 14px; cursor: pointer; border-radius: 4px;">X</button>
             <img src="${item.url}" alt="${item.title}" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;" />
             <h2>${item.title}</h2>
             <p><strong>Date:</strong> ${item.date}</p>
